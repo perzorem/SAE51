@@ -1,3 +1,7 @@
+FROM ubuntu:latest
+
+RUN apt-get update
+
 RUN apt-get install mysql-server
 
 RUN service mysql start && \
