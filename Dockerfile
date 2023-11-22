@@ -6,7 +6,7 @@ RUN apt-get install mysql-server
 
 RUN service mysql start && \
 	mysql -e "CREATE USER 'remi'@'localhost' IDENTIFIED BY 'admin';" && \
-	mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'remi'@'localhost'; && \
+	mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'remi'@'localhost'"; && \
 	mysql -e "FLUSH PRIVILEGES;"
 	
 WORKDIR /home/remi/SAE51
