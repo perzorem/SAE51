@@ -1,0 +1,16 @@
+ID_logiciel,Nom,Version,License,OS
+1,Microsoft Office,365,Commercial,Windows
+2,Adobe Photoshop,CC 2022,Commercial,Windows/Mac
+3,AutoCAD,2023,Commercial,Windows
+4,Chrome,98,Gratuit,Windows/Mac/Linux
+5,Visual Studio Code,1.64.2,Open Source,Windows/Mac/Linux
+6,Final Cut Pro,10.6.4,Commercial,Mac
+7,Unity,2022.1.12,Free,Windows/Mac/Linux
+8,Matlab,R2023a,Academic,Windows/Mac/Linux
+9,Oracle Database,19c,Commercial,Windows/Linux
+10,SketchUp,2023,Free,Windows/Mac
+11,VMware,16,Commercial,Windows/Linux
+12,QuickBooks,2022,Commercial,Windows/Mac
+13,Avast Antivirus,2023,Free,Windows/Mac
+14,Logic Pro,10.7.2,Commercial,Mac
+15,Git,2.36.1,Open Source,Windows/Mac/Linux

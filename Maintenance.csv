@@ -1,0 +1,12 @@
+ID_maintenance,ID_machine,Nom_technicien,Type_intervention,Date
+1,3,John Doe,Nettoyage,2022-03-05
+2,7,Alice Smith,Mise à jour logicielle,2022-04-10
+3,10,Bob Johnson,Réparation matérielle,2022-05-15
+4,5,Emily Davis,Installation de logiciel,2022-06-20
+5,12,Charlie Wilson,Diagnostic,2022-07-25
+6,16,Grace Brown,Maintenance préventive,2022-08-30
+7,9,David Miller,Remplacement de composant,2022-09-05
+8,2,Sarah Jones,Optimisation du système,2022-10-10
+9,18,Michael White,Réparation réseau,2022-11-15
+10,14,Linda Lee,Mise à niveau de la RAM,2022-12-20
+11,3,Olivia Moore,Configuration,2023-01-05
