@@ -1,10 +1,10 @@
 docker stop $(docker ps -q)
 
-docker build -t $sae51 -f Dockerfile .
+docker build -t sae51 .
 
 sleep 5
 
-docker run -dp 127.0.0.1:3306:3306 sae51
+docker run -dp 3306:3306 sae51
 
 sleep 5
 
