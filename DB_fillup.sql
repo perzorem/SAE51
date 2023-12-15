@@ -1,12 +1,12 @@
 USE sae51;
 SET foreign_key_checks = 0;
 
-LOAD DATA INFILE '/etc/data_ordinateur.cvs' INTO TABLE Ordinateur FIELDS TERMINATED BY ',' IGNORE 1 ROWS (ID_machine,Marque,Data_achat,RAM) ;
+LOAD DATA LOCAL INFILE '/etc/Ordinateur.csv' INTO TABLE Ordinateur FIELDS TERMINATED BY ',' IGNORE 1 ROWS ;
 
-LOAD DATA INFILE '/etc/data_maintenance.cvs' INTO TABLE  Maintenance FIELDS TERMINATED BY ',' IGNORE 1 ROWS (ID_maintenance,ID_machine,Nom_technicien,Type_intervention,Date) ;
+LOAD DATA LOCAL INFILE '/etc/Maintenance.csv' INTO TABLE  Maintenance FIELDS TERMINATED BY ',' IGNORE 1 ROWS ;
 
-LOAD DATA INFILE '/etc/data_logiciel.cvs' INTO TABLE Logiciel FIELDS TERMINATED BY ',' IGNORE 1 ROWS (ID_logiciel,Nom,VErsion,License,OS) ;
+LOAD DATA LOCAL INFILE '/etc/Logiciel.csv' INTO TABLE Logiciel FIELDS TERMINATED BY ',' IGNORE 1 ROWS ;
 
-LOAD DATA INFILE '/etc/data_utilisateur.cvs' INTO TABLE Utilisateur FIELDS TERMINATED BY ',' IGNORE 1 ROWS (ID_utilisateur,Nom,Mail);
+LOAD DATA LOCAL INFILE '/etc/Utilisateur.csv' INTO TABLE Utilisateur FIELDS TERMINATED BY ',' IGNORE 1 ROWS ;
 
-LOAD DATA INFILE '/etc/data_affectation.cvs' INTO TABLE Affectation FIELDS TERMINATED BY ',' IGNORE 1 ROWS (ID_affectation,ID_machine,ID_utilisateur,Date_affectation) ;
+LOAD DATA LOCAL INFILE '/etc/Affectation.csv' INTO TABLE Affectation FIELDS TERMINATED BY ',' IGNORE 1 ROWS ;

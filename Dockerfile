@@ -3,10 +3,13 @@ FROM ubuntu:22.04
 RUN apt-get update
 RUN apt-get install -y mysql-server
 
-RUN service mysql start&& \
+RUN echo "[mysqld]\nlocal_infile=1" > /etc/mysql/conf.d/local_infile.cnf
+
+RUN service mysql start && \
 	mysql -e "CREATE USER 'remi'@'localhost' IDENTIFIED BY 'admin';" && \
 	mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'remi'@'localhost';" && \
-	mysql -e "FLUSH PRIVILEGES;"
+	mysql -e "FLUSH PRIVILEGES;" && \
+	mysql -e "SET GLOBAL local_infile=1;"
 
 COPY Script_Maitre.sh /etc/Script_Maitre.sh
 COPY DB_create.sh /etc/DB_create.sh
@@ -21,7 +24,6 @@ COPY Logiciel.csv /etc/Logiciel.csv
 
 #WORKDIR /etc/
 
-#EXPOSE 3306
+EXPOSE 3306
 
-CMD service mysql start && bash 
-#&& /etc/DB_create.sh & /etc/DB_fillup.sh
+CMD service mysql start && bash ./etc/DB_create.sh && bash ./etc/DB_fillup.sh && bash
