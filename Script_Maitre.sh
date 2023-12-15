@@ -1,15 +1,11 @@
-docker stop $(docker ps -q)
+sudo docker stop $(docker ps -a)
+sudo docker rm $(docker images)
 
-docker build -t sae51 .
 
-sleep 5
+sudo docker build -t sae51 .
 
-docker run -dp 3306:3306 sae51
+sudo docker run -it -d -p 3306:3306 --name test sae51
 
-sleep 5
+sudo docker exec -it test bash
 
-./DB_create.sh
 
-./DB_fillup.sh
-
-echo "Terminé."

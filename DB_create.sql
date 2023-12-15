@@ -1,4 +1,3 @@
-DROP DATABASE sae51;
 CREATE DATABASE sae51;
 USE sae51;
 
@@ -24,7 +23,7 @@ CREATE TABLE Logiciel (
     OS VARCHAR(255)
 );
 
-CREATE TABLE Utilisateurs (
+CREATE TABLE Utilisateur (
     ID_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
     Nom VARCHAR(255),
     Mail VARCHAR(255)
@@ -37,3 +36,4 @@ CREATE TABLE Affectation (
     Date_affectation DATE,
     FOREIGN KEY (ID_machine) REFERENCES Ordinateur(ID_machine),
     FOREIGN KEY (ID_utilisateur) REFERENCES Utilisateur(ID_utilisateur)
+);
