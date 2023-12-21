@@ -14,8 +14,10 @@ RUN service mysql start && \
 COPY Script_Maitre.sh /etc/Script_Maitre.sh
 COPY DB_create.sh /etc/DB_create.sh
 COPY DB_fillup.sh /etc/DB_fillup.sh
+COPY DB_request.sh /etc/DB_request.sh
 COPY DB_create.sql /etc/DB_create.sql
 COPY DB_fillup.sql /etc/DB_fillup.sql
+COPY DB_request.sql /etc/DB_request.sql
 COPY Affectation.csv /etc/Affectation.csv
 COPY Maintenance.csv /etc/Maintenance.csv
 COPY Ordinateur.csv /etc/Ordinateur.csv
